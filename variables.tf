@@ -22,3 +22,12 @@ variable "instance_type" {
   description = "AWS Instance type defines the hardware configuration of the machine"
   default = "t2.micro"
 }
+variable "vpc_id" {
+  description = "VPC id for web server EC2 instance"
+  type        = string
+}
+
+variable "subnet_id" {
+  description = "Subnet id for web server EC2 instance"
+  type        = string
+}
