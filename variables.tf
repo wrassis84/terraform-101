@@ -44,3 +44,9 @@ variable "vpc_name" {
   type        = string
   default     = "server"
 }
+
+variable "subnet_cidr_block" {
+  description = "CIDR block for the webserver subnet"
+  type        = string
+  default     = "10.0.0.0/24"
+}
