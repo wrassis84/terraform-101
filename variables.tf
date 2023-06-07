@@ -22,6 +22,7 @@ variable "instance_type" {
   description = "AWS Instance type defines the hardware configuration of the machine"
   default = "t2.micro"
 }
+
 variable "vpc_id" {
   description = "VPC id for web server EC2 instance"
   type        = string
@@ -30,4 +31,10 @@ variable "vpc_id" {
 variable "subnet_id" {
   description = "Subnet id for web server EC2 instance"
   type        = string
+}
+
+variable "vpc_cidr_block" {
+  description = "CIDR block for webserver VPC"
+  type        = string
+  default     = "10.0.0.0/16"
 }
