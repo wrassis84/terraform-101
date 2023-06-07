@@ -24,7 +24,7 @@ variable "instance_type" {
 }
 
 variable "vpc_id" {
-  description = "VPC id for web server EC2 instance"
+  description = "VPC id for server EC2 instance"
   type        = string
 }
 
@@ -34,7 +34,7 @@ variable "subnet_id" {
 }
 
 variable "vpc_cidr_block" {
-  description = "CIDR block for webserver VPC"
+  description = "CIDR block for server VPC"
   type        = string
   default     = "10.0.0.0/16"
 }
@@ -46,7 +46,19 @@ variable "vpc_name" {
 }
 
 variable "subnet_cidr_block" {
-  description = "CIDR block for the webserver subnet"
+  description = "CIDR block for the server subnet"
   type        = string
   default     = "10.0.0.0/24"
+}
+
+variable "aws_az" {
+  description = "Availability Zone for the server subnet"
+  type        = string
+  default     = "us-east-1a"
+}
+
+variable "subnet_name" {
+  description = "Name for the server subnet"
+  type        = string
+  default     = "server"
 }
